@@ -10,6 +10,8 @@ class Desk extends Model
     /** @use HasFactory<\Database\Factories\DeskFactory> */
     use HasFactory;
 
+    protected $fillable = ['name'];
+
     public function lists(){
         return $this->hasMany(DeskList::class);
     }
